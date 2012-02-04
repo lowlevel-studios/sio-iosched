@@ -22,14 +22,14 @@
 enum { ASYNC, SYNC };
 
 /* Tunables */
-static const int sync_read_expire = HZ / 2;	/* max time before a sync read is submitted. */
+static const int sync_read_expire  = HZ / 2;	/* max time before a sync read is submitted. */
 static const int sync_write_expire = 2 * HZ;	/* max time before a sync write is submitted. */
 
-static const int async_read_expire = 4 * HZ;	/* ditto for async, these limits are SOFT! */
+static const int async_read_expire  =  4 * HZ;	/* ditto for async, these limits are SOFT! */
 static const int async_write_expire = 16 * HZ;	/* ditto for async, these limits are SOFT! */
 
 static const int writes_starved = 2;		/* max times reads can starve a write */
-static const int fifo_batch = 8;		/* # of sequential requests treated as one
+static const int fifo_batch     = 8;		/* # of sequential requests treated as one
 						   by the above parameters. For throughput. */
 
 /* Elevator data */
@@ -124,7 +124,6 @@ sio_choose_expired_request(struct sio_data *sd)
 	if (rq)
 		return rq;
 
-
 	return NULL;
 }
 
@@ -155,7 +154,6 @@ sio_choose_request(struct sio_data *sd, int data_dir)
 static inline void
 sio_dispatch_request(struct sio_data *sd, struct request *rq)
 {
-
 	/*
 	 * Remove the request from the fifo list
 	 * and dispatch it.
