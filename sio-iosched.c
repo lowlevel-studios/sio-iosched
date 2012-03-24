@@ -89,7 +89,7 @@ sio_queue_empty(struct request_queue *q)
 	struct sio_data *sd = q->elevator->elevator_data;
 
 	/* Check if fifo lists are empty */
-	return list_empty(&sd->fifo_list[SYNC][READ]) && list_empty(&sd->fifo_list[SYNC][WRITE])
+	return list_empty(&sd->fifo_list[SYNC][READ]) && list_empty(&sd->fifo_list[SYNC][WRITE]) &&
 	       list_empty(&sd->fifo_list[ASYNC][READ]) && list_empty(&sd->fifo_list[ASYNC][WRITE]);
 }
 #endif
