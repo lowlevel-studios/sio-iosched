@@ -19,6 +19,9 @@
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/version.h>
+#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,38)
+#include <linux/slab.h>
+#endif
 
 enum { ASYNC, SYNC };
 
