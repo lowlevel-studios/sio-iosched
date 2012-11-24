@@ -2,7 +2,7 @@
  * Simple IO scheduler
  * Based on Noop, Deadline and V(R) IO schedulers.
  *
- * Copyright (C) 2012 Miguel Boton <mboton@gmail.com>
+ * Copyright (C) 2012 Miguel Boton <mboton@lowlevel-studios.com>
  *
  *
  * This algorithm does not do any kind of sorting, as it is aimed for
