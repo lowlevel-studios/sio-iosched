@@ -282,6 +282,7 @@ sio_init_queue(struct request_queue *q)
 	q->elevator->elevator_data = sd;
 	return 0;
 #endif
+}
 
 static void
 sio_exit_queue(struct elevator_queue *e)
